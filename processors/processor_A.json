@@ -1,0 +1,14 @@
+{
+  "name": "processor_A",
+  "num_qubits": 5,
+  "coupling_map": [[0, 1], [1, 2], [1, 3], [3, 4]],
+  "basis_gates": ["rz", "sx", "x", "cx"],
+  "noise": {
+    "type": "depolarizing",
+    "source": "Coupling map: Processor_AB_Benchmark_Configuration_FINAL.pdf. Error rates: Problem_Statment_Details.pdf (Universal Challenge Framework): 1q ~0.1%, 2q ~0.5%.",
+    "one_qubit_error": 0.001,
+    "two_qubit_error": 0.005,
+    "readout_error": 0.0
+  },
+  "noise_note": "Readout error is not specified in the provided materials, so it is set to 0. Update these three numbers if the official Challenge Kit freezes different values."
+}

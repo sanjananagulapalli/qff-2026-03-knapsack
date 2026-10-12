@@ -1,0 +1,42 @@
+{
+  "best_value": 26,
+  "best_weight": 14,
+  "best_bits": [
+    1,
+    1,
+    1,
+    1,
+    0
+  ],
+  "best_items": "A+B+C+D",
+  "n_optimal_solutions": 1,
+  "n_feasible": 28,
+  "n_total": 32,
+  "top5": [
+    {
+      "items": "A+B+C+D",
+      "weight": 14,
+      "value": 26
+    },
+    {
+      "items": "A+C+E",
+      "weight": 15,
+      "value": 25
+    },
+    {
+      "items": "B+C+D+E",
+      "weight": 15,
+      "value": 24
+    },
+    {
+      "items": "A+D+E",
+      "weight": 13,
+      "value": 23
+    },
+    {
+      "items": "A+C+D",
+      "weight": 11,
+      "value": 22
+    }
+  ]
+}

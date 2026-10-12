@@ -1,0 +1,12 @@
+Item,Value
+PS code,O3
+PS name,Knapsack
+Track,Quantum Optimization
+Input / instance,"5 items, capacity 15 (data/raw/knapsack_instance.json)"
+Core algorithm,QAOA with unbalanced-penalization (no slack qubits) Ising encoding
+Required output,Best feasible item set and its value
+Primary metric,"P(optimal), P(feasible), approximation ratio, Hellinger fidelity"
+Reference/classical baseline,Exact brute force: A+B+C+D = 26
+Processor A requirements,5 logical qubits fit on A
+Processor B requirements,5 logical qubits fit on B
+Architecture metrics,"depth, two-qubit gates, SWAPs, physical qubits, runtime"
