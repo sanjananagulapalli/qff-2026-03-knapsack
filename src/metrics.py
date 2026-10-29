@@ -1,4 +1,5 @@
-
+import math
+import numpy as np
 def std_error(p: float, n: int) -> float:
     """Binomial standard error sqrt(p(1-p)/N)."""
     if n <= 0:
