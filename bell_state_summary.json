@@ -1,0 +1,62 @@
+[
+  {
+    "pair_type": "nearest",
+    "physical_pair": "0-1",
+    "distance": 1,
+    "condition": "ideal",
+    "CX_count": 1,
+    "XX": 1.0,
+    "XX_SE": 0.0,
+    "YY": -1.0,
+    "YY_SE": 0.0,
+    "ZZ": 1.0,
+    "ZZ_SE": 0.0,
+    "fidelity": 1.0,
+    "fidelity_SE": 0.0
+  },
+  {
+    "pair_type": "nearest",
+    "physical_pair": "0-1",
+    "distance": 1,
+    "condition": "noisy",
+    "CX_count": 1,
+    "XX": 0.94580078125,
+    "XX_SE": 0.005074178326602111,
+    "YY": -0.9521484375,
+    "YY_SE": 0.004775562205284335,
+    "ZZ": 0.955078125,
+    "ZZ_SE": 0.004630533407219104,
+    "fidelity": 0.9632568359375,
+    "fidelity_SE": 0.0020915771516679545
+  },
+  {
+    "pair_type": "farthest",
+    "physical_pair": "0-6",
+    "distance": 3,
+    "condition": "ideal",
+    "CX_count": 7,
+    "XX": 1.0,
+    "XX_SE": 0.0,
+    "YY": -1.0,
+    "YY_SE": 0.0,
+    "ZZ": 1.0,
+    "ZZ_SE": 0.0,
+    "fidelity": 1.0,
+    "fidelity_SE": 0.0
+  },
+  {
+    "pair_type": "farthest",
+    "physical_pair": "0-6",
+    "distance": 3,
+    "condition": "noisy",
+    "CX_count": 7,
+    "XX": 0.92529296875,
+    "XX_SE": 0.00592582985481491,
+    "YY": -0.8935546875,
+    "YY_SE": 0.007014911928662326,
+    "ZZ": 0.923828125,
+    "ZZ_SE": 0.005981367461028757,
+    "fidelity": 0.9356689453125,
+    "fidelity_SE": 0.002739767389065155
+  }
+]

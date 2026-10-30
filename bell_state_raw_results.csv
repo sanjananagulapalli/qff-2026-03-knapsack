@@ -1,0 +1,13 @@
+pair,distance,condition,basis,expectation,SE,CX_count,pair_type
+0-1,1,ideal,XX,1.0,0.0,1,nearest
+0-1,1,ideal,YY,-1.0,0.0,1,nearest
+0-1,1,ideal,ZZ,1.0,0.0,1,nearest
+0-1,1,noisy,XX,0.94580078125,0.005074178326602111,1,nearest
+0-1,1,noisy,YY,-0.9521484375,0.004775562205284335,1,nearest
+0-1,1,noisy,ZZ,0.955078125,0.004630533407219104,1,nearest
+0-6,3,ideal,XX,1.0,0.0,7,farthest
+0-6,3,ideal,YY,-1.0,0.0,7,farthest
+0-6,3,ideal,ZZ,1.0,0.0,7,farthest
+0-6,3,noisy,XX,0.92529296875,0.00592582985481491,7,farthest
+0-6,3,noisy,YY,-0.8935546875,0.007014911928662326,7,farthest
+0-6,3,noisy,ZZ,0.923828125,0.005981367461028757,7,farthest
