@@ -3,10 +3,51 @@
   "source": "Problem_Statment_Details.pdf (PS-O3 Data/Instances): values [10,4,7,5,8], weights [5,3,4,2,6], capacity 15",
   "capacity": 15,
   "items": [
-    {"name": "A", "weight": 5, "value": 10},
-    {"name": "B", "weight": 3, "value": 4},
-    {"name": "C", "weight": 4, "value": 7},
-    {"name": "D", "weight": 2, "value": 5},
-    {"name": "E", "weight": 6, "value": 8}
+    {
+      "name": "A",
+      "weight": 5,
+      "value": 10
+    },
+    {
+      "name": "B",
+      "weight": 3,
+      "value": 4
+    },
+    {
+      "name": "C",
+      "weight": 4,
+      "value": 7
+    },
+    {
+      "name": "D",
+      "weight": 2,
+      "value": 5
+    },
+    {
+      "name": "E",
+      "weight": 6,
+      "value": 8
+    }
+  ],
+  "names": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "weights": [
+    5,
+    3,
+    4,
+    2,
+    6
+  ],
+  "values": [
+    10,
+    4,
+    7,
+    5,
+    8
   ]
 }

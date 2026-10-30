@@ -82,3 +82,56 @@ See `report.md` for the full interpretation and limitations.
 
 Parts of this repository were produced with AI assistance (Claude). The team reviewed, ran and takes
 responsibility for the submitted work.
+
+
+---
+
+## Phase 2 — Processor B vs Processor D
+
+Phase 2 extends the knapsack QAOA experiment to a nine-qubit encoding
+using five item qubits and four slack qubits.
+
+### Experimental configuration
+
+- Problem: O3 — 0/1 Knapsack
+- Capacity: 15
+- Optimal classical value: 26
+- Optimal item selection: A, B, C, D
+- QAOA depth: p = 3
+- Measurement shots: 4096
+- Processors evaluated: B and D
+
+### Noise configuration
+
+| Error type | Probability |
+|---|---:|
+| Single-qubit depolarizing | 0.001 |
+| Two-qubit CX depolarizing | 0.005 |
+| Readout bit-flip | 0.01 |
+
+### Results
+
+| Metric | Processor B | Processor D |
+|---|---:|---:|
+| Optimal probability | 5.18% | 5.00% |
+| Feasible probability | 87.43% | 86.55% |
+| Best solution value | 26 | 26 |
+| Hellinger fidelity | 0.7522 | 0.7607 |
+
+Both processors recovered the optimal knapsack solution.
+
+### Phase 2 visualizations
+
+![Processor resource comparison](results/phase2_figures/processor_resource_comparison.png)
+
+![Solution quality comparison](results/phase2_figures/solution_quality_comparison.png)
+
+### Processor compatibility note
+
+Processor A has five physical qubits and cannot execute the nine-qubit
+Phase 2 encoding. It is therefore documented as incompatible with this
+configuration rather than assigned fabricated benchmark results.
+
+Detailed experimental results are available in
+[report.md](report.md) and
+[results/phase2_summary.json](results/phase2_summary.json).

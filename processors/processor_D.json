@@ -1,0 +1,29 @@
+
+{
+  "name": "processor_D",
+  "team": "Qubit Crew",
+  "problem_statement": "PS-O3",
+  "num_qubits": 9,
+  "coupling_map": [
+    [0, 1],
+    [1, 2],
+    [2, 3],
+    [3, 4],
+    [4, 5],
+    [5, 6],
+    [6, 7],
+    [7, 8],
+    [8, 0],
+    [0, 4],
+    [2, 6],
+    [4, 8]
+  ],
+  "basis_gates": ["rz", "sx", "x", "cx"],
+  "noise": {
+    "model": "official",
+    "p1": 0.001,
+    "p2": 0.005,
+    "p_readout": 0.01
+  },
+  "design_rationale": "Processor D is a custom 9-qubit ring with additional cross-connections. The ring provides a connected layout, while the cross-connections offer extra routing paths that may reduce SWAP overhead for some circuits. The design uses the official Phase 2 noise probabilities and basis gates. Its performance must be measured against Processors A and B rather than assumed to be superior."
+}

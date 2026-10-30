@@ -1,3 +1,4 @@
+
 {
   "name": "processor_B",
   "num_qubits": 9,
@@ -5,10 +6,10 @@
   "basis_gates": ["rz", "sx", "x", "cx"],
   "noise": {
     "type": "depolarizing",
-    "source": "Coupling map: Processor_AB_Benchmark_Configuration_FINAL.pdf. Error rates: Problem_Statment_Details.pdf (Universal Challenge Framework): 1q ~0.1%, 2q ~0.5%.",
+    "source": "Official Phase 2 Challenge Kit",
     "one_qubit_error": 0.001,
     "two_qubit_error": 0.005,
-    "readout_error": 0.0
+    "readout_error": 0.01
   },
-  "noise_note": "Readout error is not specified in the provided materials, so it is set to 0. Update these three numbers if the official Challenge Kit freezes different values."
+  "noise_note": "Official Phase 2 settings: 1-qubit depolarizing probability 0.001 on rz, sx, and x; 2-qubit depolarizing probability 0.005 on cx; symmetric readout bit-flip probability 0.01 (1%)."
 }

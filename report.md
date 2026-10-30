@@ -89,3 +89,79 @@ Parts of this repository were produced with AI assistance (Claude). The team rev
 **Phase 2 readiness.** Because the cost depends on the coupling map, the next steps are: a connectivity-aware qubit-to-item mapping, reducing the penalty terms to fewer interactions, trying a larger knapsack where B's connectivity advantage should show up in fidelity, and tuning QAOA parameters under noise instead of ideal-only.
 
 **Caveats.** The readout error was not specified in the provided materials, so we assumed 0. Results are averaged over 5 transpiler seeds with 4096 shots each, and all parameters were tuned offline on an ideal simulator and reused unchanged on both processors.
+
+
+
+# Phase 2 — Processor B vs Processor D
+
+## 1. Experimental Setup
+
+The Phase 2 experiment evaluates the 0/1 Knapsack optimization problem using
+a nine-qubit QAOA encoding consisting of five item qubits and four slack qubits.
+
+The problem has a capacity of 15 and five items:
+
+| Item | Weight | Value |
+|---|---:|---:|
+| A | 5 | 10 |
+| B | 3 | 4 |
+| C | 4 | 7 |
+| D | 2 | 5 |
+| E | 6 | 8 |
+
+The classical optimum is A, B, C and D, with total weight 14 and total value 26.
+
+Both processors were evaluated using 4096 shots.
+
+## 2. Noise Model
+
+The Phase 2 simulations use the prescribed noise parameters:
+
+- Single-qubit depolarizing error: 0.001
+- Two-qubit CX depolarizing error: 0.005
+- Symmetric readout bit-flip probability: 0.01
+
+## 3. Noisy Simulation Results
+
+| Metric | Processor B | Processor D |
+|---|---:|---:|
+| Shots | 4096 | 4096 |
+| Optimal probability | 5.1758% | 5.0049% |
+| Feasible probability | 87.4268% | 86.5479% |
+| Best feasible value | 26 | 26 |
+| Mean feasible value | 15.5956 | 15.5698 |
+| Hellinger fidelity | 0.7522 | 0.7607 |
+
+Both processors identified the classical optimal solution:
+A, B, C and D, with value 26.
+
+## 4. Discussion
+
+Processor B achieved an optimal-solution probability of
+5.18%, compared with 5.00% for Processor D.
+
+Processor B also achieved a higher feasible-solution probability.
+Processor D recorded a slightly higher Hellinger fidelity against the ideal
+QAOA distribution.
+
+These results indicate that the two topologies exhibit different performance
+characteristics under the same simulation conditions. No single processor
+dominates every metric.
+
+## 5. Processor A Compatibility
+
+Processor A contains five physical qubits, whereas the Phase 2 encoding
+requires nine qubits. Therefore, Processor A could not be evaluated using
+the same nine-qubit circuit and is reported as incompatible with this
+experimental configuration. No performance result is claimed for Processor A.
+
+## 6. Conclusion
+
+The Phase 2 experiment successfully executed the nine-qubit QAOA circuit
+on Processors B and D under the prescribed noise model. Both processors
+recovered the optimal knapsack solution.
+
+Processor B performed better in optimal and feasible sampling probabilities,
+while Processor D showed slightly higher Hellinger fidelity. These findings
+highlight the importance of evaluating multiple hardware-topology metrics
+rather than relying on a single performance indicator.
